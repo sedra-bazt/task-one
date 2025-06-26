@@ -26,6 +26,17 @@ header{
     align-items: center;
     background-color: #333;
 }
+@media (max-width:500px){
+    header{
+        width: 390px;
+    }
+    header li{
+        font-size: 10px;
+    }
+    header h1{
+        font-size: 18px;
+    }
+}
 header ul li{
     list-style: none;
     display: inline;
@@ -45,29 +56,37 @@ header ul li{
 
 }
 
-.aboutme figure img{
+.aboutme article figure img{
    border-radius: 50%;
    width: 125px;
    height: 125px;
 }
-.aboutme figure {
-    font-size: 30px;
+.aboutme article {
+   
     text-align: center;
     
 }
-@media(max-width:500px){
-.aboutme figure {
-    width: 100%;
-}
-.aboutme figure h2 {
-    font-size: 20px;
-}
-}
 
-.aboutme figure .info {
+
+.aboutme article .info {
+    padding-bottom: 10px;
     line-height: 0;
+     font-size: 30px;
 }
-.aboutme  span{
+@media(min-width:468px)and (max-width:600px){
+    .aboutme article .info{
+        font-size: 10px;
+        width: 300px;
+    }
+}
+@media(max-width:500px){
+    .aboutme article .info{
+        text-align: center;
+        font-size: 18px;
+         width: 250px;
+    }
+}
+.aboutme   article span{
     color: #401a46;;
 }
 .aboutme .tentinfo{
@@ -76,34 +95,40 @@ header ul li{
   line-height: 2;
   margin-top: -20px;
 }
+
+@media(min-width:468px) and (max-width:600px){
+    .aboutme .tentinfo{
+       width: 100%;
+    }
+}
+
 @media(max-width:500px){
-.aboutme .tentinfo {
-    width: 100%;
+     .aboutme .tentinfo  {
+        font-size: 10px;
+         width: 100%;
+       
+    }
 }
-
-}
-
 .aboutme .bottonaction button{
     text-transform: capitalize;
     padding: 10px 20px ;
       font-weight: bold;
     border-radius: 20px;
 }
-
-@media(max-width:500px){
-   .aboutme .bottonaction{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   } 
- .aboutme .bottonaction button{
-    width: 90px;
-     padding: 5px 10px ;
-     font-size: 10px;
-     margin-top: 15px;
- }
-  
+@media(min-width:468px)and (max-width:600px){
+    .aboutme .bottonaction button{
+        margin-top: 10px;
+        font-size: 10px;
+    }
 }
+@media (max-width:500px){
+    
+    .aboutme .bottonaction button{
+        margin-top: 10px;
+        font-size: 7px;
+    }
+}
+
 .aboutme .bottonaction button:first-child{
     background-color: #fff;
     color: #333;
@@ -129,115 +154,136 @@ header ul li{
  .experience h1{
     font-size: 25px;
  }
-    @media(max-width:500px){
-        .experience h1{
-            font-size: 20px;
-        }
-         
+   @media(max-width:500px){
+     .experience h1{
+    font-size: 15px;
+   }
+   }
+ .experience .icons{
+   padding-top: 20px;
+  }
+ .experience i{
+      padding-left: 30px;
     }
-    .experience .icons{
-            padding-top: 20px;
-         }
-    .experience i{
-        padding-left: 30px;
-    }
+
+     @media(max-width:500px){
+     .experience .icons i{
+   padding-left: 10px;
+   }
+   }
 
  /* end experience */
-
-
-     .projects{
-        padding-top: 50px;
-        text-align: center;
-     }
-      .projects h1{
-        color: #fff;
-        text-transform: uppercase;
-      }
-    .projects .card img{
-        width: 300px;
-        height: 300px;
-    }
-
 
 /* start projects */
 
 .projects{
     text-align: center;
+    width: 650px;
+    margin: auto;
+    padding-top: 50px;
     padding-bottom: 50px;
+  
+}
+@media (max-width:500px){
+    .projects {
+      width: 200px;
+      text-align: center;
+      margin: auto;
+    }
+   
+}
+
+@media (min-width:468px) and (max-width:600px){
+    .projects {
+      width: 300px;
+      text-align: center;
+      margin: auto;
+    }
 }
 .projects h1{
+    font-size: 35px;
+    margin-bottom: 20px;
     color: #fff;
-    color: orange;
 }
- .projects .cardinfo{
+
+
+.projects .projectinfo{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+
+}
+
+@media(min-width:468px) and (max-width:600px){
+  .projects .projectinfo{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }  
+}
+@media (max-width:500px){
+  .projects .projectinfo{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }  
+}
+.projects .projectinfo article{
+    width: calc(100% - 10%);
+   
+   
+}
+@media(min-width:468PX) and (max-width:600px){
+ .projects .projectinfo article{
+   width: 300px;
+   margin-top: 20px;
+  }  
+}
+@media (max-width:500px){
+ .projects .projectinfo article{
+   width: 220px;
+   margin-top: 20px;
+  }  
+}
+.projects .projectinfo article figure{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: calc(200px - 55px);
+}
+.projects .projectinfo article figure img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.projects .projectinfo article .articlrinfo{
+    background-color: #333;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    padding: 0;
+    margin: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
  }
- @media(max-width:500px){
-   .projects .cardinfo{
-   flex-direction: column;
-   } 
-}
- .projects .card{
-    width: 325px;
-    margin-left: 10px;
- }
-@media(max-width:767px){
-   .projects .card{
-    width: 200px;
-   } 
-}
-
-@media(max-width:500px){
-   .projects .card{
-
-   width: 100%;
-   } 
-}
-
-.projects .card img{
-    width: 99%;
-    height: 250px;
-    padding: 10px;
-    object-fit: cover;
-    border-top-right-radius:20px ;
-    border-top-left-radius:20px ;
-}
-
-
-.projects .card .cardtext{
-background-color: #333;
- margin-left: 10px;
-width: 93.4%;
-padding: 0;
-margin-top: -14px;
-border-bottom-right-radius:20px ;
-border-bottom-left-radius:20px ;
-}
-@media(max-width:767px){
-   .projects .card .cardtext{
-    width: 89.4%;
-   } 
-}
-
-/* @media(max-width:500px){
-   .projects .card .cardtext{
-    width: 50.4%;
-   } 
-} */
-
-.projects .card h2,p{
-color: #fff;
-padding: 0;
-margin: 0;
-}
+  .projects .articlrinfo .txt {
+    color: #fff;
+    line-height: 0;
+    text-align: left;
+    text-transform: capitalize;
+  
+  }
+  
+  @media(max-width:500px){
+      .projects .articlrinfo .txt p,h2{
+        font-size: 10px;
+     
+      }
+  }
 /* end projects */
 /* start newexperience */
 
 .newexperience{
     padding-bottom: 50px;
-
     text-align: center;
     color: #fff;
 }
@@ -254,20 +300,16 @@ margin: 0;
 .newexperience .mincontainer{
     width: 650px;
 }
-@media (max-width:767px){
-.newexperience .mincontainer{
-    width: 450px;
+@media (min-width:468PX) and (max-width:600px){
+ .newexperience .mincontainer{
+    width: 300px;
 }
 }
-@media (max-width:500px){
-.newexperience .mincontainer{
-    width: 100%;
-    text-align: left;
-    padding-left: 0;
-    
-}
-.newexperience .cardtxt .test h2,p,time{
-    font-size: 10px;
+
+
+@media  (max-width:500px){
+ .newexperience .mincontainer{
+    width: 250px;
 }
 }
 .newexperience .cardexp i{
@@ -292,11 +334,24 @@ margin: 0;
     color: #eeeeee52;
     
 }
+@media (min-width:468PX) and (max-width:600px){
 
+    .newexperience .cardtxt .test h2,p,time{
+        font-size: 12px;
+    }
+}
+
+
+@media  (max-width:500px){
+
+    .newexperience .cardtxt .test h2,p,time{
+        font-size: 10px;
+    }
+}
 /* end newexperience */
 
 /* start contact */
-.endconcat{
+footer{
  padding-bottom: 50px;
  background-color: #333;
 }
@@ -305,31 +360,21 @@ margin: 0;
     padding-top: 50px;
     color: #fff;
     margin: auto;
-   
 
 }
-@media (max-width:767px){
-.contact{
-    width: 450px;
-     margin: auto;
-}}
+@media(min-width:468PX) and (max-width:600px){
+   .contact{
+    width: 300px;
 
-
-@media (max-width:500px){
-.contact{
-    width: 100%;
-    margin: auto;
-    text-align: center;
-   
-   
-}
-.contact h1{
-font-size: 15px;
-}
-.contact p{
-    font-size: 10px;
+} 
 }
 
+@media(max-width:500px){
+   .contact{
+    width: 250px;
+  
+
+} 
 }
 .contact p{
     margin-top: 20px;
@@ -338,18 +383,9 @@ font-size: 15px;
     padding-top: 20px;
     display: flex;
     justify-content: left;
-    align-items: end;
+    align-items: center;
 }
 
-@media(max-width:500px){
-.contact .email{
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-}
-
-}
 .contact .email p{
     padding-left: 10px;
 }
@@ -361,11 +397,7 @@ font-size: 15px;
 .contact  .icons i:not(:first-child){
     padding-left: 10px;
 }
-@media (max-width:500px) {
-    .contact  .icons i:not(:first-child){
-        padding: 10px;
-    }
-}
+
 /* end contact */
 
 
